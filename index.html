@@ -9,6 +9,7 @@
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       margin: 0;
+      position: relative;
       background: linear-gradient(120deg, #e6f2e6 60%, #c9e6c9 100%);
       color: #2e5d27;
       max-width: 600px;
@@ -18,10 +19,30 @@
       border-radius: 16px;
       padding: 32px 18px;
       min-height: 90vh;
+      overflow: hidden;
+      z-index: 0;
     }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      width: 90%;
+      height: 80%;
+      background: url('https://cdn-icons-png.flaticon.com/512/414/414969.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: -1;
+      filter: drop-shadow(0 0 4px #7cb34255);
+    }
+
     header {
       text-align: center;
       margin-bottom: 35px;
+      position: relative;
+      z-index: 1;
     }
     .ebook-cover {
       width: 190px;
@@ -29,18 +50,24 @@
       border-radius: 8px;
       margin: 0 auto 15px;
       display: block;
+      position: relative;
+      z-index: 1;
     }
     h1 {
       color: #388e3c;
       font-size: 2.1em;
       font-weight: 700;
       margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
     }
     .subtitle {
       font-size: 1.1em;
       color: #4caf50;
       font-weight: 400;
       margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
     }
     .download-link a {
       background: #7cb342;
@@ -53,6 +80,8 @@
       margin-bottom: 13px;
       display: inline-block;
       transition: background 0.4s;
+      position: relative;
+      z-index: 1;
     }
     .download-link a:hover {
       background: #558b2f;
@@ -64,6 +93,8 @@
       margin-bottom: 18px;
       text-align: center;
       letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
     }
     .btn-pagar {
       display: block;
@@ -82,6 +113,8 @@
       border: none;
       transition: filter 0.25s;
       outline: none;
+      position: relative;
+      z-index: 1;
     }
     .btn-pagar:hover {
       filter: brightness(0.85);
@@ -96,6 +129,8 @@
       color: #33691e;
       font-size: 1em;
       box-shadow: 0 2px 8px #a4d29f55;
+      position: relative;
+      z-index: 1;
     }
     footer {
       text-align: center;
@@ -103,6 +138,8 @@
       color: #558b2f;
       margin-top: 40px;
       padding-top: 12px;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
